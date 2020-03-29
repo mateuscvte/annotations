@@ -1,0 +1,24 @@
+<div class="welcome">
+
+  <div class="logo">
+    <img src="assets/logo.jpeg" width="300" height="300"/>
+  </div>
+
+  <div class="ui-g box">
+
+    <form [formGroup]="loginForm">
+      <div class="ui-g-12 ui-md-12 ui-sm-12 ui-fluid">
+        <input pInputText formControlName="email" type="email" placeholder="Digite seu e-mail" />
+      </div>
+
+      <div class="ui-g-12 ui-md-12 ui-sm-12 ui-fluid">
+        <input pInputText formControlName="password" type="password" placeholder="digite sua senha" />
+      </div>
+
+      <div class="ui-g-12 ui-fluid">
+        <button pButton label="Login" (click)="login()"></button>
+      </div>
+    </form>
+
+  </div>
+</div>

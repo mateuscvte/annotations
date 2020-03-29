@@ -1,0 +1,13 @@
+.welcome {
+  background: #990000;
+  height: 100vh;
+  width: 100%;
+}
+.logo {
+  text-align: center;
+}
+
+.box form {
+  text-align: center;
+  margin: 0 auto;
+}

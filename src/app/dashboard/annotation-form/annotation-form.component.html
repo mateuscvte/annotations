@@ -1,0 +1,26 @@
+<form [formGroup]="form">
+  <div class="ui-g">
+    <div class="ui-g-12 ui-fluid">
+      <input pInputText placeholder="Nome da Cliente" formControlName="client"/>
+    </div>
+    <div class="ui-g-12 ui-fluid">
+      <input pInputText placeholder="Serviço" formControlName="service"/>
+    </div>
+    <div class="ui-g-12 ui-fluid">
+      <p-inputMask mask="99/99/9999" formControlName="date" placeholder="Data"
+                   slotChar="mm/dd/yyyy"></p-inputMask>
+    </div>
+    <div class="ui-g-12 ui-fluid">
+      <input pInputText placeholder="Horário" formControlName="hour"/>
+    </div>
+    <div class="ui-g-12 ui-fluid">
+      <input pInputText type="number" placeholder="Valor" formControlName="value"/>
+    </div>
+    <div class="ui-g-2 ui-lg-2 ui-md-6 ui-sm-6">
+      <button pButton icon="pi pi-check" label="Cadastrar" (click)="sendAnnotation()"></button>
+    </div>
+    <div class="ui-g-2 ui-lg-2 ui-md-6 ui-sm-6">
+      <button pButton class="ui-button-secondary" icon="pi pi-times" label="Limpar dados" (click)="clear()"></button>
+    </div>
+  </div>
+</form>

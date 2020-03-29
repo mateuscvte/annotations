@@ -1,0 +1,25 @@
+<div class="ui-g">
+  <app-topbar></app-topbar>
+</div>
+
+<div id="main" class="ui-g">
+  <div class="ui-g-12 ui-fluid">
+    <p-tabView [activeIndex]="index" (onChange)="handleChange($event)">
+      <p-tabPanel header="Anotações">
+        <div class="ui-g">
+          <div class="ui-g-12">
+            <h3>Gerenciamento de Anotações </h3>
+          </div>
+          <div class="ui-g-12 ui-fluid">
+            <p-messages key="annotations"></p-messages>
+            <app-table-view [table]="table" (remove)="removeAnnotation($event)"></app-table-view>
+          </div>
+        </div>
+      </p-tabPanel>
+      <p-tabPanel header="Cadastrar">
+        <app-annotation-form [form]="form" (submitAnnotation)="submitAnnotation()"></app-annotation-form>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+</div>
+
